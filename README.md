@@ -8,7 +8,9 @@ The file df_to_json.r takes the output from the previous step and saves the outp
 
 ### Website files
 **1. css:** contains css files
+
 **2. data:** results of the parsers
+
 **3. js:** the d3 files!
 
 The others are landing sites for the individual pages.
