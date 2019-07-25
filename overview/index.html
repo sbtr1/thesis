@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Visual Analytics for Sentiment of Company Earnings Calls</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- D3 Tooltip CSS -->
+    <link rel="stylesheet" href="/css/d3-tip.css">
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+    <div class="header">
+        <h1>Visualizing Sentiment of Company Earnings Calls</h1>     
+    </div>
+
+     <ul id="nav">
+        <li><a href="/">Instructions</a></li>
+        <li><a href="/overview/">Visualization</a></li>
+    </ul>
+
+
+    <div class="textbox">
+        <p><b>Left: </b>In this visualization we give an overview of the <i>average sentiment score</i> for the 30 companies in the DJIA. For each company, we also show the <i>relevance</i> of its earnings calls by showing the correlation of its sentiment its financial measures (revenue, operating income and net income). Use the drop-down menus to select the desired measure and sector, and click on a circle to select a company to view on the right.</p>
+
+        <p><b>Right: </b>Each circle represents a quarter. The connected scatterplot shows how financial measures vary with sentiment over time for the company you have selected. The direction of the thin grey line indicates the direction of <i>time</i>, starting from 2008Q1 and ending in 2017Q4. Use the drop-down menus to select the desired financial measure, and mouseover a quarter to see the most frequent and specific words.</p>
+
+        <p>Please try and complete the following user tasks:
+            <ul>
+            <li><b>User task 1: </b>For the company you were given, compare how <i>positive</i> and <i>relevant</i> the sentiment of its earnings calls were relative to other companies in the Dow Jones.</li>
+            <li><b>User task 2: </b>For the company you were given, observe how its sentiment score varied with its financial measures over time. Please observe the general pattern of the relationship, also noting the unusual quarters.</li>
+            </ul>
+
+        </p>
+        <p>In each case, please note how easily you were able to complete the user task, and what features enabled you to do so. Please also note what features you would like to add to the visualization. When you are ready, please return to the questionnaire to complete the feedback form.</p>
+    </div>
+
+    <div class = "container">
+        <div class ="row" style="padding-bottom: 20px; padding-top: 20px">
+            
+            <div class="col-md-3">
+                    <select id="var-select" class="form-control">
+                        <option selected value="sentiment">Sentiment score</option>
+                        <option value="corr_revenue">Correlation with revenue</option>
+                        <option value="corr_operating">Correlation with operating income</option>
+                        <option value="corr_net">Correlation with net income</option>
+                    </select>
+            </div>
+            <div class="col-md-2">
+                <select id="sector-select" class="form-control">
+                    <option selected value="all">All</option>
+                    <option value="Consumer Discretionary">Consumer Discretionary</option>
+                    <option value="Consumer Staples">Consumer Staples</option>
+                    <option value="Energy">Energy</option>
+                    <option value="Financials">Financials</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Industrials">Industrials</option>
+                    <option value="Telecoms">Telecoms</option>
+                    <option value="Technology">Technology</option>
+                </select>
+            </div>
+            <div class="col-md-5"></div>
+            <div class="col-md-2">
+                <select id="financial-select" class="form-control">
+                    <option selected value="revenue">Revenue vs sentiment</option>
+                    <option value="operatingIncome">Operating income vs sentiment</option>
+                    <option value="netIncome">Net income vs sentiment</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap grid setup -->
+    <div class="container">
+        <div class="row">
+            <div class ="col-md-5">
+                <div id="chart-area"></div>
+            </div>
+            <div class ="col-md-7">
+                <div id="chart-bottom"></div>
+            </div>
+        </div>
+    </div>
+
+<!-- External JS libraries -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/d3.min.js"></script>
+<script src="/js/d3-tip.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/d3-shape.js"></script>
+<!-- Custom JS -->
+<script src="/js/overview.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

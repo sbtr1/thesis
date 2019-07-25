@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Visualizing Sentiment of Company Earnings Calls</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- D3 Tooltip CSS -->
+    <link rel="stylesheet" href="/css/d3-tip.css">
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Visualizing Sentiment of Company Earnings Calls</h1>     
+    </div>
+
+    <ul id="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/overview/">Overview</a></li>
+        <li><a href="/timeseries/">Time Series</a></li>
+        <li><a href="/singlecompany/">Single Company</a></li>
+        <li><a href="/quarterly/">Quarterly</a></li>
+    </ul>
+
+    <div class="header">
+        <h3>Changes in sentiment and revenue over time</h3>
+    </div>
+
+    <!-- Bootstrap grid setup -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-3" id = "playreset">
+                <button id="play-button" class="btn btn-primary">Play</button>
+                <button id="reset-button" class="btn btn-primary">Reset</button>
+            </div>
+            <div class="col-md-5">
+                <select id="sector-select" class="form-control">
+                    <option selected value="all">All</option>
+                    <option value="Consumer Discretionary">Consumer Discretionary</option>
+                    <option value="Consumer Staples">Consumer Staples</option>
+                    <option value="Energy">Energy</option>
+                    <option value="Financials">Financials</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Industrials">Industrials</option>
+                    <option value="Telecoms">Telecoms</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="chart-area"></div>                 
+            </div> 
+        </div>
+    </div>
+
+<!-- External JS libraries -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/d3.min.js"></script>
+<script src="/js/d3-tip.js"></script>
+<!-- Custom JS -->
+<script src="/js/mainquarterly.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
